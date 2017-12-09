@@ -12,10 +12,6 @@
       "label": "Cloud Input Variables"
     },
     {
-      "name": "virtualmachine",
-      "label": "Virtual Machine Input Variables"
-    },
-    {
       "name": "ssh_keys",
       "label": "SSH Keys"
     },
@@ -26,6 +22,14 @@
     {
       "name": "environment",
       "label": "Environment"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
+    },
+    {
+      "name": "ungrouped",
+      "label": "ungrouped"
     }
   ],
   "output_groups": [
@@ -756,7 +760,7 @@
       "description": "Disk Controller Type - DB2Node01",
       "default": "scsi",
       "hidden": false,
-      "label": "Disk Controller Type - DB2Node01",
+      "label": "Disk 4 Disk Controller Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -788,7 +792,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume_disk_controller_type",
@@ -796,7 +800,7 @@
       "description": "Disk Controller Type - DB2Node01",
       "default": "scsi",
       "hidden": false,
-      "label": "Disk Controller Type - DB2Node01",
+      "label": "Disk 1 Controller Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -828,7 +832,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume1_disk_controller_type",
@@ -836,7 +840,7 @@
       "description": "Disk Controller Type - DB2Node01",
       "default": "scsi",
       "hidden": false,
-      "label": "Disk Controller Type - DB2Node01",
+      "label": "Disk 2 Controller Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -868,7 +872,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume2_disk_controller_type",
@@ -876,7 +880,7 @@
       "description": "Disk Controller Type - DB2Node01",
       "default": "scsi",
       "hidden": false,
-      "label": "Disk Controller Type - DB2Node01",
+      "label": "Disk 3 Controller Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -908,14 +912,14 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume3_disk_datastore",
       "type": "string",
       "description": "Disk Datastore - DB2Node01",
       "hidden": false,
-      "label": "Disk Datastore - DB2Node01",
+      "label": "Disk 3 Datastore - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -926,7 +930,7 @@
       "type": "string",
       "description": "Disk Datastore - DB2Node01",
       "hidden": false,
-      "label": "Disk Datastore - DB2Node01",
+      "label": "Disk 1 Datastore - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -937,7 +941,7 @@
       "type": "string",
       "description": "Disk Datastore - DB2Node01",
       "hidden": false,
-      "label": "Disk Datastore - DB2Node01",
+      "label": "Disk 2 Datastore - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -948,7 +952,7 @@
       "type": "string",
       "description": "Disk Datastore - DB2Node01",
       "hidden": false,
-      "label": "Disk Datastore - DB2Node01",
+      "label": "Disk 3 Datastore - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -960,7 +964,7 @@
       "description": "Disk Keep On Remove - DB2Node01",
       "default": "false",
       "hidden": false,
-      "label": "Disk Keep On Remove - DB2Node01",
+      "label": "Disk 2 Keep On Remove - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -976,7 +980,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume3_disk_keep_on_remove",
@@ -984,7 +988,7 @@
       "description": "Disk Keep On Remove - DB2Node01",
       "default": "false",
       "hidden": false,
-      "label": "Disk Keep On Remove - DB2Node01",
+      "label": "Disk 4 Keep On Remove - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1000,7 +1004,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume_disk_keep_on_remove",
@@ -1008,7 +1012,7 @@
       "description": "Disk Keep On Remove - DB2Node01",
       "default": "false",
       "hidden": false,
-      "label": "Disk Keep On Remove - DB2Node01",
+      "label": "Disk 1 Keep On Remove - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1024,7 +1028,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume2_disk_keep_on_remove",
@@ -1032,7 +1036,7 @@
       "description": "Disk Keep On Remove - DB2Node01",
       "default": "false",
       "hidden": false,
-      "label": "Disk Keep On Remove - DB2Node01",
+      "label": "Disk 3 Keep On Remove - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1048,7 +1052,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume2_disk_name",
@@ -1056,12 +1060,12 @@
       "description": "Disk Name - DB2Node01",
       "default": "disk3",
       "hidden": false,
-      "label": "Disk Name - DB2Node01",
+      "label": "Disk 3 Name - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume_disk_name",
@@ -1069,12 +1073,12 @@
       "description": "Disk Name - DB2Node01",
       "default": "disk1",
       "hidden": false,
-      "label": "Disk Name - DB2Node01",
+      "label": "Disk 1 Name - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume3_disk_name",
@@ -1082,12 +1086,12 @@
       "description": "Disk Name - DB2Node01",
       "default": "disk4",
       "hidden": false,
-      "label": "Disk Name - DB2Node01",
+      "label": "Disk 4 Name - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume1_disk_name",
@@ -1095,12 +1099,12 @@
       "description": "Disk Name - DB2Node01",
       "default": "disk2",
       "hidden": false,
-      "label": "Disk Name - DB2Node01",
+      "label": "Disk 2 Name - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume2_disk_size",
@@ -1108,7 +1112,7 @@
       "description": "Disk Volume Size - DB2Node01",
       "default": 10,
       "hidden": false,
-      "label": "Disk Volume Size - DB2Node01",
+      "label": "Disk 3 Volume Size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1120,7 +1124,7 @@
       "description": "Disk Volume Size - DB2Node01",
       "default": 10,
       "hidden": false,
-      "label": "Disk Volume Size - DB2Node01",
+      "label": "Disk 1 Volume Size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1132,7 +1136,7 @@
       "description": "Disk Volume Size - DB2Node01",
       "default": 20,
       "hidden": false,
-      "label": "Disk Volume Size - DB2Node01",
+      "label": "Disk 4 Volume Size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1142,9 +1146,9 @@
       "name": "storage-volume1_disk_size",
       "type": "string",
       "description": "Disk Volume Size - DB2Node01",
-      "default": 40,
+      "default": 50,
       "hidden": false,
-      "label": "Disk Volume Size - DB2Node01",
+      "label": "Disk 2 Volume Size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1156,7 +1160,7 @@
       "description": "Disk Volume Type - DB2Node01",
       "default": "eager_zeroed",
       "hidden": false,
-      "label": "Disk Volume Type - DB2Node01",
+      "label": "Disk 1 Volume Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1176,7 +1180,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume2_disk_type",
@@ -1184,7 +1188,7 @@
       "description": "Disk Volume Type - DB2Node01",
       "default": "eager_zeroed",
       "hidden": false,
-      "label": "Disk Volume Type - DB2Node01",
+      "label": "Disk 3 Volume Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1204,7 +1208,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume1_disk_type",
@@ -1212,7 +1216,7 @@
       "description": "Disk Volume Type - DB2Node01",
       "default": "eager_zeroed",
       "hidden": false,
-      "label": "Disk Volume Type - DB2Node01",
+      "label": "Disk 2 Volume Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1232,7 +1236,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "storage-volume3_disk_type",
@@ -1240,7 +1244,7 @@
       "description": "Disk Volume Type - DB2Node01",
       "default": "eager_zeroed",
       "hidden": false,
-      "label": "Disk Volume Type - DB2Node01",
+      "label": "Disk 4 Volume Type - DB2Node01",
       "secured": false,
       "options": [
         {
@@ -1260,7 +1264,7 @@
       "required": true,
       "immutable": false,
       "immutable_after_create": true,
-      "group_name": "db2node01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "DB2Node01_domain",
@@ -1505,7 +1509,7 @@
       "name": "DB2Node01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 2048,
+      "default": 4096,
       "hidden": false,
       "label": "Virtual Machine Memory - DB2Node01",
       "secured": false,
@@ -1553,7 +1557,7 @@
       "description": "Device to mount to, leave blank if unknown, the system will search for it.",
       "default": "/dev/xvdc",
       "hidden": false,
-      "label": "device - DB2Node01",
+      "label": "Disk 1 device - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1566,7 +1570,7 @@
       "description": "Device to mount to, leave blank if unknown, the system will search for it.",
       "default": "/dev/xvdd",
       "hidden": false,
-      "label": "device - DB2Node01",
+      "label": "Disk 2 device - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1579,7 +1583,7 @@
       "description": "Device to mount to, leave blank if unknown, the system will search for it.",
       "default": "/dev/xvdf",
       "hidden": false,
-      "label": "device - DB2Node01",
+      "label": "Disk 4 device - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1592,7 +1596,7 @@
       "description": "Device to mount to, leave blank if unknown, the system will search for it.",
       "default": "/dev/xvde",
       "hidden": false,
-      "label": "device - DB2Node01",
+      "label": "Disk 3 device - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1605,7 +1609,7 @@
       "description": "Force the mount true or false",
       "default": "true",
       "hidden": false,
-      "label": "force - DB2Node01",
+      "label": "Disk 3 force - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1618,7 +1622,7 @@
       "description": "Force the mount true or false",
       "default": "true",
       "hidden": false,
-      "label": "force - DB2Node01",
+      "label": "Disk 4 force - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1631,7 +1635,7 @@
       "description": "Force the mount true or false",
       "default": "true",
       "hidden": false,
-      "label": "force - DB2Node01",
+      "label": "Disk 1 force - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1644,7 +1648,7 @@
       "description": "Force the mount true or false",
       "default": "true",
       "hidden": false,
-      "label": "force - DB2Node01",
+      "label": "Disk 2 force - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1657,7 +1661,7 @@
       "description": "File System Type",
       "default": "ext4",
       "hidden": false,
-      "label": "fstype - DB2Node01",
+      "label": "Disk 2 fstype - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1670,7 +1674,7 @@
       "description": "File System Type",
       "default": "ext4",
       "hidden": false,
-      "label": "fstype - DB2Node01",
+      "label": "Disk 1 fstype - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1683,7 +1687,7 @@
       "description": "File System Type",
       "default": "ext4",
       "hidden": false,
-      "label": "fstype - DB2Node01",
+      "label": "Disk 4 fstype - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1696,7 +1700,7 @@
       "description": "File System Type",
       "default": "ext4",
       "hidden": false,
-      "label": "fstype - DB2Node01",
+      "label": "Disk 3 fstype - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1709,7 +1713,7 @@
       "description": "Group owner of the mount point",
       "default": "default",
       "hidden": false,
-      "label": "group - DB2Node01",
+      "label": "Disk 2 group - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1722,7 +1726,7 @@
       "description": "Group owner of the mount point",
       "default": "default",
       "hidden": false,
-      "label": "group - DB2Node01",
+      "label": "Disk 3 group - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1735,7 +1739,7 @@
       "description": "Group owner of the mount point",
       "default": "default",
       "hidden": false,
-      "label": "group - DB2Node01",
+      "label": "Disk 4 group - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1748,7 +1752,7 @@
       "description": "Group owner of the mount point",
       "default": "default",
       "hidden": false,
-      "label": "group - DB2Node01",
+      "label": "Disk 1 group - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1761,7 +1765,7 @@
       "description": "Label of the file system",
       "default": "actlog",
       "hidden": false,
-      "label": "label - DB2Node01",
+      "label": "Disk 3 label - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1774,7 +1778,7 @@
       "description": "Label of the file system",
       "default": "instance",
       "hidden": false,
-      "label": "label - DB2Node01",
+      "label": "Disk 1 label - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1787,7 +1791,7 @@
       "description": "Label of the file system",
       "default": "data",
       "hidden": false,
-      "label": "label - DB2Node01",
+      "label": "Disk 2 label - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1800,7 +1804,7 @@
       "description": "Label of the file system",
       "default": "archive",
       "hidden": false,
-      "label": "label - DB2Node01",
+      "label": "Disk 4 label - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1813,7 +1817,7 @@
       "description": "Directory to mount to, directory will be created",
       "default": "/database/data",
       "hidden": false,
-      "label": "mountpoint - DB2Node01",
+      "label": "Disk 2 mountpoint - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1826,7 +1830,7 @@
       "description": "Directory to mount to, directory will be created",
       "default": "/database/actlog",
       "hidden": false,
-      "label": "mountpoint - DB2Node01",
+      "label": "Disk 3 mountpoint - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1839,7 +1843,7 @@
       "description": "Directory to mount to, directory will be created",
       "default": "/instance",
       "hidden": false,
-      "label": "mountpoint - DB2Node01",
+      "label": "Disk 1 mountpoint - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1852,7 +1856,7 @@
       "description": "Directory to mount to, directory will be created",
       "default": "/database/archive",
       "hidden": false,
-      "label": "mountpoint - DB2Node01",
+      "label": "Disk 4 mountpoint - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1865,7 +1869,7 @@
       "description": "Advanced options for mounting the disk",
       "default": "defaults",
       "hidden": false,
-      "label": "options - DB2Node01",
+      "label": "Disk 2 options - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1878,7 +1882,7 @@
       "description": "Advanced options for mounting the disk",
       "default": "defaults",
       "hidden": false,
-      "label": "options - DB2Node01",
+      "label": "Disk 1 options - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1891,7 +1895,7 @@
       "description": "Advanced options for mounting the disk",
       "default": "defaults",
       "hidden": false,
-      "label": "options - DB2Node01",
+      "label": "Disk 3 options - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1904,7 +1908,7 @@
       "description": "Advanced options for mounting the disk",
       "default": "defaults",
       "hidden": false,
-      "label": "options - DB2Node01",
+      "label": "Disk 4 options - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1917,7 +1921,7 @@
       "description": "Permissions for the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "perms - DB2Node01",
+      "label": "Disk 3 perms - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1930,7 +1934,7 @@
       "description": "Permissions for the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "perms - DB2Node01",
+      "label": "Disk 2 perms - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1943,7 +1947,7 @@
       "description": "Permissions for the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "perms - DB2Node01",
+      "label": "Disk 4 perms - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1956,7 +1960,7 @@
       "description": "Permissions for the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "perms - DB2Node01",
+      "label": "Disk 1 perms - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1969,7 +1973,7 @@
       "description": "Size in GB of the disk",
       "default": "10",
       "hidden": false,
-      "label": "size - DB2Node01",
+      "label": "Disk 3 size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1980,9 +1984,9 @@
       "name": "DB2Node01_linux_filesystems_filesystem2_size",
       "type": "string",
       "description": "Size in GB of the disk",
-      "default": "40",
+      "default": "50",
       "hidden": false,
-      "label": "size - DB2Node01",
+      "label": "Disk 2 size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -1995,7 +1999,7 @@
       "description": "Size in GB of the disk",
       "default": "20",
       "hidden": false,
-      "label": "size - DB2Node01",
+      "label": "Disk 4 size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2008,7 +2012,7 @@
       "description": "Size in GB of the disk",
       "default": "10",
       "hidden": false,
-      "label": "size - DB2Node01",
+      "label": "Disk 1 size - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2021,7 +2025,7 @@
       "description": "Owner of the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "user - DB2Node01",
+      "label": "Disk 1 user - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2034,7 +2038,7 @@
       "description": "Owner of the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "user - DB2Node01",
+      "label": "Disk 4 user - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2047,7 +2051,7 @@
       "description": "Owner of the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "user - DB2Node01",
+      "label": "Disk 2 user - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2060,7 +2064,7 @@
       "description": "Owner of the mount point.",
       "default": "default",
       "hidden": false,
-      "label": "user - DB2Node01",
+      "label": "Disk 3 user - DB2Node01",
       "secured": false,
       "required": true,
       "immutable": false,
@@ -2133,6 +2137,7 @@
       "secured": false,
       "required": true,
       "immutable": false,
+      "immutable_after_create": true,
       "group_name": "ssh_keys"
     }
   ],

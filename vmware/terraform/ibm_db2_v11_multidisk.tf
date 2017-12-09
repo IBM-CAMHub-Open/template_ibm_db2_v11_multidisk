@@ -58,7 +58,6 @@ variable "ibm_stack_name" {
   description = "A unique stack name."
 }
 
-#### Default OS Admin User Map ####
 
 ##### DB2Node01 variables #####
 #Variable : DB2Node01-image
@@ -443,7 +442,7 @@ variable "DB2Node01_linux_filesystems_filesystem2_perms" {
 variable "DB2Node01_linux_filesystems_filesystem2_size" {
   type = "string"
   description = "Size in GB of the disk"
-  default = "40"
+  default = "50"
 }
 
 #Variable : DB2Node01_linux_filesystems_filesystem2_user
@@ -655,7 +654,7 @@ variable "DB2Node01_number_of_vcpu" {
 
 variable "DB2Node01_memory" {
   description = "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024"
-  default = "2048"
+  default = "4096"
 }
 
 variable "DB2Node01_cluster" {
@@ -765,7 +764,7 @@ variable "storage-volume1_disk_type" {
 variable "storage-volume1_disk_size" {
   type = "string"
   description = "Disk Volume Size - DB2Node01"
-  default = "40"
+  default = "50"
 }
 
 variable "storage-volume1_disk_keep_on_remove" {
