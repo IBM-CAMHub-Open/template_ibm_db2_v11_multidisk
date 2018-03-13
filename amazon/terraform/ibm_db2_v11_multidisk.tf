@@ -1,9 +1,18 @@
 # =================================================================
-# Licensed Materials - Property of IBM
-# 5737-E67
-# @ Copyright IBM Corporation 2016, 2017 All Rights Reserved
-# US Government Users Restricted Rights - Use, duplication or disclosure
-# restricted by GSA ADP Schedule Contract with IBM Corp.
+# Copyright 2017 IBM Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+#	you may not use this file except in compliance with the License.
+#	You may obtain a copy of the License at
+#
+#	  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+#	WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 # =================================================================
 
 # This is a terraform generated template generated from ibm_db2_v11_multidisk
@@ -23,6 +32,10 @@ variable "user_public_ssh_key" {
   type = "string"
   description = "User defined public SSH key used to connect to the virtual machine. The format must be in openSSH."
   default = "None"
+}
+
+variable "ibm_stack_id" {
+  description = "A unique stack id."
 }
 
 variable "aws_ami_owner_id" {
@@ -51,10 +64,6 @@ provider "template" {
   version = "~> 1.0"
 }
 
-provider "random" {
-  version = "~> 1.0"
-}
-
 data "aws_vpc" "selected_vpc" {
   filter {
     name = "tag:Name"
@@ -75,10 +84,6 @@ data "aws_security_group" "aws_sg_camc_name_selected" {
 #Parameter : aws_sg_camc_name
 variable "aws_sg_camc_name" {
   description = "AWS Security Group Name"
-}
-
-resource "random_id" "stack_id" {
-  byte_length = "16"
 }
 
 ##############################################################
@@ -922,11 +927,20 @@ resource "aws_instance" "DB2Node01" {
     destination = "DB2Node01_add_ssh_key.sh"
     content     = <<EOF
 # =================================================================
-# Licensed Materials - Property of IBM
-# 5737-E67
-# @ Copyright IBM Corporation 2016, 2017 All Rights Reserved
-# US Government Users Restricted Rights - Use, duplication or disclosure
-# restricted by GSA ADP Schedule Contract with IBM Corp.
+# Copyright 2017 IBM Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+#	you may not use this file except in compliance with the License.
+#	You may obtain a copy of the License at
+#
+#	  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+#	WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 # =================================================================
 #!/bin/bash
 
@@ -1041,17 +1055,17 @@ resource "camc_bootstrap" "DB2Node01_chef_bootstrap_comp" {
   data = <<EOT
 {
   "os_admin_user": "${var.DB2Node01-os_admin_user}",
-  "stack_id": "${random_id.stack_id.hex}",
+  "stack_id": "${var.ibm_stack_id}",
   "environment_name": "_default",
   "host_ip": "${var.DB2Node01-mgmt-network-public == "false" ? aws_instance.DB2Node01.private_ip : aws_instance.DB2Node01.public_ip}",
   "node_name": "${var.DB2Node01-name}",
   "node_attributes": {
     "ibm_internal": {
-      "stack_id": "${random_id.stack_id.hex}",
+      "stack_id": "${var.ibm_stack_id}",
       "stack_name": "${var.ibm_stack_name}",
       "vault": {
         "item": "secrets",
-        "name": "${random_id.stack_id.hex}"
+        "name": "${var.ibm_stack_id}"
       }
     }
   }
@@ -1074,7 +1088,7 @@ resource "camc_softwaredeploy" "DB2Node01_db2_create_db" {
   data = <<EOT
 {
   "os_admin_user": "${var.DB2Node01-os_admin_user}",
-  "stack_id": "${random_id.stack_id.hex}",
+  "stack_id": "${var.ibm_stack_id}",
   "environment_name": "_default",
   "host_ip": "${var.DB2Node01-mgmt-network-public == "false" ? aws_instance.DB2Node01.private_ip : aws_instance.DB2Node01.public_ip}",
   "node_name": "${var.DB2Node01-name}",
@@ -1147,7 +1161,7 @@ resource "camc_softwaredeploy" "DB2Node01_db2_create_db" {
         }
       }
     },
-    "vault": "${random_id.stack_id.hex}"
+    "vault": "${var.ibm_stack_id}"
   }
 }
 EOT
@@ -1168,7 +1182,7 @@ resource "camc_softwaredeploy" "DB2Node01_db2_v111_install" {
   data = <<EOT
 {
   "os_admin_user": "${var.DB2Node01-os_admin_user}",
-  "stack_id": "${random_id.stack_id.hex}",
+  "stack_id": "${var.ibm_stack_id}",
   "environment_name": "_default",
   "host_ip": "${var.DB2Node01-mgmt-network-public == "false" ? aws_instance.DB2Node01.private_ip : aws_instance.DB2Node01.public_ip}",
   "node_name": "${var.DB2Node01-name}",
@@ -1200,7 +1214,7 @@ resource "camc_softwaredeploy" "DB2Node01_db2_v111_install" {
         "sw_repo_password": "${var.ibm_sw_repo_password}"
       }
     },
-    "vault": "${random_id.stack_id.hex}"
+    "vault": "${var.ibm_stack_id}"
   }
 }
 EOT
@@ -1221,7 +1235,7 @@ resource "camc_softwaredeploy" "DB2Node01_linux_cloud_fs" {
   data = <<EOT
 {
   "os_admin_user": "${var.DB2Node01-os_admin_user}",
-  "stack_id": "${random_id.stack_id.hex}",
+  "stack_id": "${var.ibm_stack_id}",
   "environment_name": "_default",
   "host_ip": "${var.DB2Node01-mgmt-network-public == "false" ? aws_instance.DB2Node01.private_ip : aws_instance.DB2Node01.public_ip}",
   "node_name": "${var.DB2Node01-name}",
@@ -1302,7 +1316,7 @@ resource "camc_vaultitem" "VaultItem" {
   "vault_content": {
     "item": "secrets",
     "values": {},
-    "vault": "${random_id.stack_id.hex}"
+    "vault": "${var.ibm_stack_id}"
   }
 }
 EOT
@@ -1321,6 +1335,6 @@ output "DB2Node01_roles" {
 }
 
 output "stack_id" {
-  value = "${random_id.stack_id.hex}"
+  value = "${var.ibm_stack_id}"
 }
 
